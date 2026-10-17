@@ -4,22 +4,21 @@
   --font-sans: "Segoe UI", "PingFang SC", "Hiragino Sans GB",
     "Microsoft YaHei", system-ui, -apple-system, sans-serif;
 
-  --bg: #f7f7fb;
-  --bg-soft: #f0f1f8;
+  --bg: #f5fbff;
+  --bg-soft: #edf8ff;
   --surface: #ffffff;
-  --surface-soft: #f4f5fa;
-  --text: #151829;
-  --text-soft: #5f6579;
-  --muted: #8a91a4;
-  --border: rgba(21, 24, 41, 0.08);
-  --border-strong: rgba(21, 24, 41, 0.13);
+  --surface-soft: #f2f9fe;
+  --text: #10212e;
+  --text-soft: #536b7b;
+  --muted: #8197a5;
+  --border: rgba(16, 47, 66, 0.08);
+  --border-strong: rgba(16, 47, 66, 0.14);
 
-  --brand: #6366f1;
-  --brand-strong: #5457e5;
-  --brand-violet: #8b5cf6;
-  --brand-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
-  --brand-soft: rgba(99, 102, 241, 0.1);
-  --brand-glow: rgba(99, 102, 241, 0.2);
+  --brand: #38bdf8;
+  --brand-strong: #087aa8;
+  --brand-gradient: linear-gradient(135deg, #94e6ff, #4cc4f0);
+  --brand-soft: rgba(56, 189, 248, 0.13);
+  --brand-glow: rgba(56, 189, 248, 0.24);
 
   --green: #0b9270;
   --green-soft: rgba(11, 146, 112, 0.1);
@@ -40,22 +39,21 @@
   :root {
     color-scheme: dark;
 
-    --bg: #0d0f16;
-    --bg-soft: #12151e;
-    --surface: #171a24;
-    --surface-soft: #1e222f;
-    --text: #edf0f8;
-    --text-soft: #a0a8bd;
-    --muted: #717a90;
-    --border: rgba(255, 255, 255, 0.08);
-    --border-strong: rgba(255, 255, 255, 0.14);
+    --bg: #08131c;
+    --bg-soft: #0d1f2c;
+    --surface: #102230;
+    --surface-soft: #152b3a;
+    --text: #eaf7ff;
+    --text-soft: #a1bdcb;
+    --muted: #6d8999;
+    --border: rgba(163, 224, 255, 0.09);
+    --border-strong: rgba(163, 224, 255, 0.16);
 
-    --brand: #8b8ff7;
-    --brand-strong: #a5a8fb;
-    --brand-violet: #b092ff;
-    --brand-gradient: linear-gradient(135deg, #6f72ef, #9b6cf6);
-    --brand-soft: rgba(139, 143, 247, 0.13);
-    --brand-glow: rgba(139, 143, 247, 0.23);
+    --brand: #7dd3fc;
+    --brand-strong: #a9e7ff;
+    --brand-gradient: linear-gradient(135deg, #a2ecff, #57c9f2);
+    --brand-soft: rgba(125, 211, 252, 0.13);
+    --brand-glow: rgba(125, 211, 252, 0.24);
 
     --green: #4ed3ac;
     --green-soft: rgba(78, 211, 172, 0.12);
@@ -88,12 +86,12 @@ body {
   background:
     radial-gradient(
       1000px 680px at 88% -12%,
-      rgba(139, 92, 246, 0.1),
+      rgba(56, 189, 248, 0.12),
       transparent 62%
     ),
     radial-gradient(
       860px 600px at -12% 22%,
-      rgba(99, 102, 241, 0.09),
+      rgba(34, 211, 238, 0.09),
       transparent 60%
     ),
     var(--bg);
@@ -107,12 +105,12 @@ body {
     background:
       radial-gradient(
         1000px 680px at 88% -12%,
-        rgba(139, 92, 246, 0.11),
+        rgba(56, 189, 248, 0.13),
         transparent 62%
       ),
       radial-gradient(
         860px 600px at -12% 22%,
-        rgba(99, 102, 241, 0.08),
+        rgba(34, 211, 238, 0.08),
         transparent 60%
       ),
       var(--bg);
@@ -138,8 +136,8 @@ svg {
 }
 
 ::selection {
-  color: #ffffff;
-  background: rgba(99, 102, 241, 0.75);
+  color: #052c40;
+  background: rgba(125, 220, 255, 0.8);
 }
 
 :focus-visible {
@@ -178,7 +176,7 @@ svg {
   top: 0;
   z-index: 100;
   border-bottom: 1px solid transparent;
-  background: rgba(247, 247, 251, 0.78);
+  background: rgba(245, 251, 255, 0.78);
   backdrop-filter: blur(18px) saturate(150%);
   -webkit-backdrop-filter: blur(18px) saturate(150%);
   transition:
@@ -189,17 +187,17 @@ svg {
 
 .site-header.is-scrolled {
   border-color: var(--border);
-  background: rgba(247, 247, 251, 0.92);
+  background: rgba(245, 251, 255, 0.93);
   box-shadow: 0 8px 30px -24px rgba(20, 25, 55, 0.35);
 }
 
 @media (prefers-color-scheme: dark) {
   .site-header {
-    background: rgba(13, 15, 22, 0.78);
+    background: rgba(8, 19, 28, 0.78);
   }
 
   .site-header.is-scrolled {
-    background: rgba(13, 15, 22, 0.93);
+    background: rgba(8, 19, 28, 0.93);
   }
 }
 
@@ -222,7 +220,7 @@ svg {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  box-shadow: 0 5px 14px rgba(99, 102, 241, 0.24);
+  box-shadow: 0 5px 14px rgba(56, 189, 248, 0.28);
 }
 
 .brand-name {
@@ -309,17 +307,17 @@ svg {
 }
 
 .button-primary {
-  color: #ffffff;
+  color: #052c40;
   background: var(--brand-gradient);
   box-shadow:
-    0 8px 20px -8px rgba(99, 102, 241, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 8px 20px -8px rgba(56, 189, 248, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
 }
 
 .button-primary:hover {
   box-shadow:
-    0 12px 28px -10px rgba(99, 102, 241, 0.65),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 12px 28px -10px rgba(56, 189, 248, 0.66),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
 }
 
 .button-ghost {
@@ -335,13 +333,13 @@ svg {
 }
 
 .button-light {
-  color: #22253c;
-  background: #ffffff;
-  box-shadow: 0 14px 36px -16px rgba(0, 0, 0, 0.45);
+  color: #052c40;
+  background: var(--brand-gradient);
+  box-shadow: 0 14px 36px -16px rgba(56, 189, 248, 0.58);
 }
 
 .button-light:hover {
-  box-shadow: 0 18px 42px -16px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 18px 42px -16px rgba(56, 189, 248, 0.7);
 }
 
 .button-small {
@@ -373,12 +371,12 @@ svg {
   width: 30px;
   height: 30px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(4, 54, 79, 0.1);
 }
 
 .button-light .download-icon {
-  color: var(--brand-strong);
-  background: rgba(99, 102, 241, 0.1);
+  color: #052c40;
+  background: rgba(4, 54, 79, 0.1);
 }
 
 .download-icon svg {
@@ -396,14 +394,14 @@ svg {
 }
 
 .button-label small {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(5, 44, 64, 0.64);
   font-size: 9.5px;
   font-weight: 550;
   letter-spacing: 0.02em;
 }
 
 .button-light .button-label small {
-  color: var(--muted);
+  color: rgba(5, 44, 64, 0.62);
 }
 
 .menu-toggle {
@@ -469,7 +467,7 @@ svg {
 }
 
 .eyebrow-light {
-  color: #c3c4ff;
+  color: #bcecff;
 }
 
 .section {
@@ -547,9 +545,9 @@ svg {
   color: transparent;
   background: linear-gradient(
     100deg,
-    #5457e5 0%,
-    #7c5ce8 44%,
-    #b24bd8 100%
+    #087aa8 0%,
+    #1ba3d8 46%,
+    #39c7ea 100%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -559,9 +557,9 @@ svg {
   .gradient-text {
     background: linear-gradient(
       100deg,
-      #a7aaff 0%,
-      #b399ff 48%,
-      #e6a0ff 100%
+      #9ce6ff 0%,
+      #c4f4ff 48%,
+      #e1fbff 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -625,8 +623,8 @@ svg {
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(99, 102, 241, 0.22),
-    rgba(139, 92, 246, 0.08) 40%,
+    rgba(56, 189, 248, 0.24),
+    rgba(34, 211, 238, 0.08) 40%,
     transparent 68%
   );
   filter: blur(10px);
@@ -791,10 +789,10 @@ svg {
   background:
     radial-gradient(
       260px 220px at 20% 22%,
-      rgba(99, 102, 241, 0.14),
+      rgba(56, 189, 248, 0.17),
       transparent 70%
     ),
-    linear-gradient(155deg, #fbfbfe 0%, #eef0f9 55%, #f6f1ff 100%);
+    linear-gradient(155deg, #fbfdff 0%, #eefaff 55%, #f1fdff 100%);
 }
 
 .fake-site::after {
@@ -804,7 +802,7 @@ svg {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: rgba(139, 92, 246, 0.1);
+  background: rgba(34, 211, 238, 0.11);
   filter: blur(10px);
   content: "";
 }
@@ -819,8 +817,8 @@ svg {
   width: 27px;
   height: 27px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #686bf1, #9564ee);
-  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.22);
+  background: linear-gradient(135deg, #8ce2ff, #3cbbea);
+  box-shadow: 0 6px 12px rgba(56, 189, 248, 0.25);
 }
 
 .fake-nav-lines {
@@ -842,7 +840,7 @@ svg {
 }
 
 .fake-kicker {
-  color: #777ee1;
+  color: #168fb9;
   font-size: 6px;
   font-weight: 750;
   letter-spacing: 0.13em;
@@ -881,8 +879,8 @@ svg {
   height: 22px;
   margin-top: 16px;
   border-radius: 7px;
-  background: linear-gradient(135deg, #6a6df3, #8b5cf6);
-  box-shadow: 0 7px 14px rgba(99, 102, 241, 0.2);
+  background: linear-gradient(135deg, #8ce2ff, #3cbbea);
+  box-shadow: 0 7px 14px rgba(56, 189, 248, 0.24);
 }
 
 .fake-site-cards {
@@ -981,13 +979,13 @@ svg {
 
 @media (prefers-color-scheme: dark) {
   .float-chip {
-    background: rgba(23, 26, 36, 0.9);
+    background: rgba(16, 34, 48, 0.9);
   }
 
   .browser-chrome {
     border-color: rgba(255, 255, 255, 0.07);
-    color: #aab1c3;
-    background: linear-gradient(180deg, #232734, #1d202b);
+    color: #aabdc9;
+    background: linear-gradient(180deg, #1c2c38, #15232e);
   }
 
   .browser-dots span {
@@ -1007,14 +1005,14 @@ svg {
   }
 
   .browser-tab {
-    color: #cdd3e1;
-    background: #2c303d;
+    color: #d4e9f3;
+    background: #223542;
   }
 
   .browser-toolbar {
     border-color: rgba(255, 255, 255, 0.07);
-    color: #7d8597;
-    background: #252935;
+    color: #7f98a7;
+    background: #1b2c38;
   }
 
   .browser-nav-arrows {
@@ -1022,18 +1020,18 @@ svg {
   }
 
   .browser-address {
-    color: #7f8798;
-    background: #1b1e28;
+    color: #7f98a7;
+    background: #11202a;
   }
 
   .fake-site {
     background:
       radial-gradient(
         260px 220px at 20% 22%,
-        rgba(99, 102, 241, 0.22),
+        rgba(56, 189, 248, 0.22),
         transparent 70%
       ),
-      linear-gradient(155deg, #191c26 0%, #141722 55%, #1d172b 100%);
+      linear-gradient(155deg, #102431 0%, #0c1c27 55%, #0e2532 100%);
   }
 
   .fake-nav-lines i {
@@ -1041,7 +1039,7 @@ svg {
   }
 
   .fake-site-hero h2 {
-    color: #d9deeb;
+    color: #d9eff8;
   }
 
   .fake-site-hero p,
@@ -1135,9 +1133,9 @@ svg {
   height: 23px;
 }
 
-.tone-indigo {
-  --tone-color: #585ce5;
-  --tone-bg: rgba(99, 102, 241, 0.11);
+.tone-sky {
+  --tone-color: #087aa8;
+  --tone-bg: rgba(56, 189, 248, 0.12);
 }
 
 .tone-cyan {
@@ -1160,15 +1158,15 @@ svg {
   --tone-bg: rgba(11, 146, 112, 0.1);
 }
 
-.tone-violet {
-  --tone-color: #8452dd;
-  --tone-bg: rgba(132, 82, 221, 0.1);
+.tone-aqua {
+  --tone-color: #0f8f8a;
+  --tone-bg: rgba(20, 184, 166, 0.11);
 }
 
 @media (prefers-color-scheme: dark) {
-  .tone-indigo {
-    --tone-color: #a5a7ff;
-    --tone-bg: rgba(139, 143, 247, 0.14);
+  .tone-sky {
+    --tone-color: #8adfff;
+    --tone-bg: rgba(125, 211, 252, 0.14);
   }
 
   .tone-cyan {
@@ -1191,9 +1189,9 @@ svg {
     --tone-bg: rgba(88, 213, 176, 0.12);
   }
 
-  .tone-violet {
-    --tone-color: #c5a1ff;
-    --tone-bg: rgba(197, 161, 255, 0.12);
+  .tone-aqua {
+    --tone-color: #5eead4;
+    --tone-bg: rgba(94, 234, 212, 0.12);
   }
 }
 
@@ -1236,8 +1234,8 @@ svg {
     linear-gradient(
       180deg,
       transparent 0%,
-      rgba(99, 102, 241, 0.035) 26%,
-      rgba(139, 92, 246, 0.055) 62%,
+      rgba(56, 189, 248, 0.04) 26%,
+      rgba(34, 211, 238, 0.055) 62%,
       transparent 100%
     );
 }
@@ -1282,24 +1280,24 @@ svg {
   overflow: hidden;
 }
 
-.stage-indigo {
+.stage-sky {
   background:
     radial-gradient(
       420px 300px at 50% 18%,
       rgba(255, 255, 255, 0.72),
       transparent 70%
     ),
-    linear-gradient(145deg, rgba(99, 102, 241, 0.17), rgba(139, 92, 246, 0.06));
+    linear-gradient(145deg, rgba(56, 189, 248, 0.18), rgba(34, 211, 238, 0.06));
 }
 
-.stage-violet {
+.stage-aqua {
   background:
     radial-gradient(
       420px 300px at 50% 18%,
       rgba(255, 255, 255, 0.72),
       transparent 70%
     ),
-    linear-gradient(145deg, rgba(194, 90, 219, 0.14), rgba(99, 102, 241, 0.07));
+    linear-gradient(145deg, rgba(34, 211, 238, 0.15), rgba(56, 189, 248, 0.07));
 }
 
 .shot-stage img {
@@ -1308,31 +1306,31 @@ svg {
   max-width: 100%;
   object-fit: contain;
   object-position: top center;
-  border: 1px solid rgba(30, 35, 70, 0.1);
+  border: 1px solid rgba(16, 47, 66, 0.1);
   border-bottom: 0;
   border-radius: 17px 17px 0 0;
-  box-shadow: 0 -12px 46px -22px rgba(35, 41, 90, 0.35);
+  box-shadow: 0 -12px 46px -22px rgba(10, 45, 65, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
-  .stage-indigo {
+  .stage-sky {
     background:
       radial-gradient(
         420px 300px at 50% 18%,
-        rgba(99, 102, 241, 0.15),
+        rgba(56, 189, 248, 0.14),
         transparent 70%
       ),
-      linear-gradient(145deg, #1c2030, #171923);
+      linear-gradient(145deg, #10222f, #0c1721);
   }
 
-  .stage-violet {
+  .stage-aqua {
     background:
       radial-gradient(
         420px 300px at 50% 18%,
-        rgba(194, 90, 219, 0.13),
+        rgba(34, 211, 238, 0.12),
         transparent 70%
       ),
-      linear-gradient(145deg, #211c2d, #171923);
+      linear-gradient(145deg, #0e2430, #0c1721);
   }
 
   .shot-stage img {
@@ -1382,22 +1380,22 @@ svg {
   gap: clamp(38px, 6vw, 72px);
   padding: clamp(32px, 5vw, 58px);
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(188, 236, 255, 0.12);
   border-radius: var(--radius-xl);
-  color: #ffffff;
+  color: #f2fbff;
   background:
     radial-gradient(
       600px 320px at 88% 8%,
-      rgba(124, 92, 232, 0.34),
+      rgba(56, 189, 248, 0.32),
       transparent 65%
     ),
     radial-gradient(
       520px 300px at 2% 100%,
-      rgba(56, 189, 248, 0.12),
+      rgba(34, 211, 238, 0.13),
       transparent 65%
     ),
-    linear-gradient(145deg, #181a2d 0%, #221f42 58%, #27204a 100%);
-  box-shadow: 0 40px 100px -58px rgba(20, 22, 50, 0.8);
+    linear-gradient(145deg, #0b1f2e 0%, #0c2b3f 58%, #083044 100%);
+  box-shadow: 0 40px 100px -58px rgba(5, 28, 44, 0.8);
 }
 
 .install-panel::after {
@@ -1406,7 +1404,7 @@ svg {
   right: -60px;
   width: 260px;
   height: 260px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(188, 236, 255, 0.08);
   border-radius: 50%;
   content: "";
 }
@@ -1429,7 +1427,7 @@ svg {
 .install-intro > p {
   max-width: 390px;
   margin: 0;
-  color: rgba(235, 237, 255, 0.66);
+  color: rgba(230, 247, 255, 0.68);
   font-size: 13.5px;
   line-height: 1.8;
 }
@@ -1442,7 +1440,7 @@ svg {
   max-width: 390px;
   margin: 16px 0 0;
   overflow-wrap: anywhere;
-  color: rgba(235, 237, 255, 0.42);
+  color: rgba(230, 247, 255, 0.44);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 9px;
   line-height: 1.6;
@@ -1465,7 +1463,7 @@ svg {
   display: flex;
   gap: 18px;
   padding: 17px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(188, 236, 255, 0.1);
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.045);
   backdrop-filter: blur(4px);
@@ -1474,7 +1472,7 @@ svg {
 .step-index {
   flex: 0 0 auto;
   padding-top: 2px;
-  color: #aeb2ff;
+  color: #9ee6ff;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -1489,13 +1487,13 @@ svg {
 
 .steps p {
   margin: 0;
-  color: rgba(235, 237, 255, 0.57);
+  color: rgba(230, 247, 255, 0.59);
   font-size: 11.5px;
   line-height: 1.7;
 }
 
 .steps code {
-  color: #d9dbff;
+  color: #d8f4ff;
   background: rgba(255, 255, 255, 0.09);
 }
 
