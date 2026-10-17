@@ -1,1 +1,670 @@
-<h1>Blog</h1>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待办助手 · 浏览器侧栏待办扩展</title>
+    <meta
+      name="description"
+      content="待办助手是一款兼容 Chrome 与 Edge 的浏览器侧栏待办扩展。支持单条与分组待办、截止时间、定时提醒、优先级标签和深色模式，数据仅保存在本地。"
+    />
+    <meta name="theme-color" content="#6366f1" />
+    <link rel="canonical" href="https://ktmitax.github.io/" />
+    <link rel="icon" type="image/png" href="assets/icon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="待办助手" />
+    <meta property="og:title" content="待办助手 · 浏览器侧栏待办扩展" />
+    <meta
+      property="og:description"
+      content="把待办放进浏览器侧栏。分组、提醒、优先级与本地存储，轻量而完整。"
+    />
+    <meta property="og:url" content="https://ktmitax.github.io/" />
+    <meta
+      property="og:image"
+      content="https://ktmitax.github.io/assets/screenshot-overview.png"
+    />
+    <meta property="og:image:alt" content="待办助手侧栏界面预览" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="待办助手 · 浏览器侧栏待办扩展"
+    />
+    <meta
+      name="twitter:description"
+      content="把待办放进浏览器侧栏。分组、提醒、优先级与本地存储，轻量而完整。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ktmitax.github.io/assets/screenshot-overview.png"
+    />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="待办助手首页">
+          <img
+            class="brand-icon"
+            src="assets/icon.png"
+            alt=""
+            width="34"
+            height="34"
+          />
+          <span class="brand-name">待办助手</span>
+          <span class="version-pill">v1.0.0</span>
+        </a>
+
+        <nav id="site-menu" class="site-nav" aria-label="主导航">
+          <a href="#features">功能</a>
+          <a href="#preview">界面</a>
+          <a href="#install">安装</a>
+          <a
+            class="nav-github"
+            href="https://github.com/ktmitax/BrowserTodoHelper"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d="M6 3h7v7M13 3 4.5 11.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </nav>
+
+        <div class="header-actions">
+          <a
+            class="button button-primary button-small nav-download"
+            href="downloads/BrowserTodoHelper-v1.0.0.zip"
+            download="BrowserTodoHelper-v1.0.0.zip"
+          >
+            下载扩展
+          </a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="打开菜单"
+            aria-controls="site-menu"
+            aria-expanded="false"
+            data-menu-toggle
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container hero-inner">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Chrome &amp; Edge 浏览器扩展
+            </p>
+            <h1>
+              把待办，<br />
+              <span class="gradient-text">放进侧栏。</span>
+            </h1>
+            <p class="hero-lead">
+              不用在应用之间来回切换。在浏览器侧栏里快速记录、分组、设置提醒，
+              用清晰的颜色标记优先级，把注意力留给下一件事。
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-primary button-large download-button"
+                href="downloads/BrowserTodoHelper-v1.0.0.zip"
+                download="BrowserTodoHelper-v1.0.0.zip"
+              >
+                <span class="download-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 3.5v9m0 0 3.5-3.5M10 12.5 6.5 9M4 15.5h12"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="button-label">
+                  下载扩展 ZIP
+                  <small>v1.0.0 · 195 KB</small>
+                </span>
+              </a>
+              <a
+                class="button button-ghost button-large"
+                href="https://github.com/ktmitax/BrowserTodoHelper"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="inline-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path
+                    d="M6 3h7v7M13 3 4.5 11.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                查看源码
+              </a>
+            </div>
+
+            <ul class="hero-facts" aria-label="产品特点">
+              <li>
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path
+                    d="m2.7 7.2 2.6 2.5 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                无需构建
+              </li>
+              <li>
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path
+                    d="m2.7 7.2 2.6 2.5 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                数据仅存本地
+              </li>
+              <li>
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <path
+                    d="m2.7 7.2 2.6 2.5 6-6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                支持深色模式
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" data-reveal>
+            <div class="hero-glow" aria-hidden="true"></div>
+
+            <div class="browser-shell">
+              <div class="browser-chrome" aria-hidden="true">
+                <div class="browser-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="browser-tab">
+                  <img src="assets/icon.png" alt="" width="13" height="13" />
+                  待办助手
+                  <span class="browser-tab-close">×</span>
+                </div>
+                <span class="browser-add">+</span>
+              </div>
+
+              <div class="browser-toolbar" aria-hidden="true">
+                <div class="browser-nav-arrows">
+                  <span>‹</span><span>›</span>
+                </div>
+                <div class="browser-address">
+                  <svg viewBox="0 0 12 12" fill="none">
+                    <rect
+                      x="2.2"
+                      y="5.2"
+                      width="7.6"
+                      height="5.3"
+                      rx="1.4"
+                      stroke="currentColor"
+                      stroke-width="1.1"
+                    />
+                    <path
+                      d="M3.8 5.1V3.9a2.2 2.2 0 0 1 4.4 0v1.2"
+                      stroke="currentColor"
+                      stroke-width="1.1"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  chrome-extension://待办助手
+                </div>
+                <span class="browser-star">☆</span>
+              </div>
+
+              <div class="browser-content">
+                <div class="fake-site" aria-hidden="true">
+                  <div class="fake-site-nav">
+                    <span class="fake-logo"></span>
+                    <span class="fake-nav-lines">
+                      <i></i><i></i><i></i>
+                    </span>
+                  </div>
+                  <div class="fake-site-hero">
+                    <span class="fake-kicker">FOCUS ON WHAT MATTERS</span>
+                    <h2>专注当下，<br />逐项完成。</h2>
+                    <p></p>
+                    <span class="fake-button"></span>
+                  </div>
+                  <div class="fake-site-cards">
+                    <span></span><span></span>
+                  </div>
+                </div>
+
+                <div class="panel-screenshot">
+                  <img
+                    src="assets/screenshot-overview.png"
+                    alt="待办助手侧栏界面，包含分组、待办、优先级、截止与提醒时间"
+                    width="800"
+                    height="1600"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="float-chip float-reminder" aria-hidden="true">
+              <span class="float-chip-icon">
+                <svg viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M5.2 8.4a4.8 4.8 0 0 1 9.6 0c0 3.8 1.6 4.7 1.6 4.7H3.6s1.6-.9 1.6-4.7ZM8.2 16a2.1 2.1 0 0 0 3.6 0"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>
+                <strong>提醒已设置</strong>
+                <small>到点自动通知</small>
+              </span>
+            </div>
+
+            <div class="float-chip float-local" aria-hidden="true">
+              <span class="float-chip-icon is-green">
+                <svg viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 2.8 16 5v4.4c0 3.8-2.5 6.6-6 7.8-3.5-1.2-6-4-6-7.8V5l6-2.2Z"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="m7.3 9.9 1.8 1.8 3.6-3.6"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>
+                <strong>数据仅存本地</strong>
+                <small>无账号 · 无上传</small>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="features">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">功能</p>
+            <h2>轻量，但不简陋。</h2>
+            <p>
+              真正高频的待办功能，被收进一个随时可见、不会打断工作流的侧栏。
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card" data-reveal>
+              <span class="feature-icon tone-indigo" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="16"
+                    rx="3"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+                  <path d="M15 4v16" stroke="currentColor" stroke-width="1.7" />
+                  <path
+                    d="M6.5 8h4M6.5 11h2.5M17.5 8.5h1"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <h3>侧栏即开即用</h3>
+              <p>点击工具栏图标，侧栏立即可用。浏览网页时也能随时记录下一件事。</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <span class="feature-icon tone-cyan" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m12 3 8.5 4.5L12 12 3.5 7.5 12 3Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="m3.5 12 8.5 4.5 8.5-4.5M3.5 16.5 12 21l8.5-4.5"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <h3>单条与分组</h3>
+              <p>零散任务单独记录，相关事项收进命名分组，项目脉络始终清晰。</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <span class="feature-icon tone-amber" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6.2 10a5.8 5.8 0 0 1 11.6 0c0 4.7 2 5.8 2 5.8H4.2s2-1.1 2-5.8Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.8 19.3a2.5 2.5 0 0 0 4.4 0"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <h3>双时间与提醒</h3>
+              <p>截止时间负责规划，提醒时间交给浏览器通知。错过的提醒也会在下次启动后补发。</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <span class="feature-icon tone-rose" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 6.5h14M5 12h9M5 17.5h6"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                  <circle cx="18" cy="15.5" r="3" stroke="currentColor" stroke-width="1.7" />
+                </svg>
+              </span>
+              <h3>优先级一目了然</h3>
+              <p>高、中、低、普通四档彩色标签，让真正重要的事在列表里立即浮现。</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <span class="feature-icon tone-green" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 3.2 19 6v5.2c0 4.6-3 7.9-7 9.3-4-1.4-7-4.7-7-9.3V6l7-2.8Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="m8.8 11.9 2.1 2.1 4.3-4.4"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <h3>只属于本地</h3>
+              <p>基于 <code>chrome.storage.local</code> 保存，无账号、无上传、无追踪。</p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <span class="feature-icon tone-violet" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M20 14.3A8.3 8.3 0 0 1 9.7 4a8.4 8.4 0 1 0 10.3 10.3Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M17.5 4.5v3M16 6h3"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <h3>跟随系统主题</h3>
+              <p>自动适配浅色与深色模式，在较窄的侧栏中也能保持完整、清晰。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section preview-section" id="preview">
+        <div class="container">
+          <div class="section-heading split-heading" data-reveal>
+            <div>
+              <p class="eyebrow">界面</p>
+              <h2>每一处，都为侧栏而设计。</h2>
+            </div>
+            <p>
+              信息密度刚好，操作路径够短。日期时间选择器也完全显示在侧栏内，不再被浏览器原生弹窗裁切。
+            </p>
+          </div>
+
+          <div class="preview-grid">
+            <figure class="shot-card" data-reveal>
+              <div class="shot-stage stage-indigo">
+                <img
+                  src="assets/screenshot-overview.png"
+                  alt="待办助手任务列表界面"
+                  width="800"
+                  height="1600"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span class="caption-kicker">01 / 任务总览</span>
+                <h3>分组、优先级与时间，一眼看清。</h3>
+                <p>
+                  未完成事项按截止时间排序，不同优先级带有对应色条。完成、编辑与切换筛选都只需一次点击。
+                </p>
+              </figcaption>
+            </figure>
+
+            <figure class="shot-card" data-reveal>
+              <div class="shot-stage stage-violet">
+                <img
+                  src="assets/screenshot-datetime-picker.png"
+                  alt="待办助手的侧栏日期时间选择器"
+                  width="800"
+                  height="1600"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span class="caption-kicker">02 / 时间选择</span>
+                <h3>提醒时间，在侧栏里完整展开。</h3>
+                <p>
+                  自定义月历与小时、分钟输入，支持“今天”快捷选择、清除和取消。窄侧栏中也不会被裁切。
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section install-section" id="install">
+        <div class="container">
+          <div class="install-panel" data-reveal>
+            <div class="install-intro">
+              <p class="eyebrow eyebrow-light">开始使用</p>
+              <h2>一分钟，<br />装进浏览器。</h2>
+              <p>
+                下载 ZIP 并解压，在 Chrome 或 Edge 中加载文件夹即可。无需构建，无需安装额外依赖。
+              </p>
+
+              <a
+                class="button button-light button-large download-button"
+                href="downloads/BrowserTodoHelper-v1.0.0.zip"
+                download="BrowserTodoHelper-v1.0.0.zip"
+              >
+                <span class="download-icon" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M10 3.5v9m0 0 3.5-3.5M10 12.5 6.5 9M4 15.5h12"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="button-label">
+                  下载待办助手
+                  <small>BrowserTodoHelper-v1.0.0.zip</small>
+                </span>
+              </a>
+
+              <p class="checksum">
+                SHA-256 · aa341e050e856171c02c60a2e8a9e47d00fc02f2b709c0e645c0f4014ffcac48
+              </p>
+            </div>
+
+            <ol class="steps">
+              <li>
+                <span class="step-index">01</span>
+                <div>
+                  <h3>下载并解压</h3>
+                  <p>点击下载按钮，把 ZIP 解压到一个固定的本地目录。</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-index">02</span>
+                <div>
+                  <h3>打开扩展管理页</h3>
+                  <p>
+                    访问 <code>chrome://extensions</code> 或
+                    <code>edge://extensions</code>，开启“开发者模式”。
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-index">03</span>
+                <div>
+                  <h3>加载并固定</h3>
+                  <p>
+                    选择“加载已解压的扩展程序”，指向解压后的文件夹，然后把待办助手固定到工具栏。
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section class="privacy-section">
+        <div class="container">
+          <div class="privacy-card" data-reveal>
+            <span class="privacy-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3.2 19 6v5.2c0 4.6-3 7.9-7 9.3-4-1.4-7-4.7-7-9.3V6l7-2.8Z"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="m8.8 11.9 2.1 2.1 4.3-4.4"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <div class="privacy-copy">
+              <h2>你的待办，只属于你。</h2>
+              <p>
+                所有内容保存在浏览器本地扩展存储中，不上传服务器，也不需要注册账号。
+              </p>
+            </div>
+            <div class="privacy-badges" aria-label="隐私特性">
+              <span>本地存储</span>
+              <span>零网络请求</span>
+              <span>无需账号</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="#top">
+              <img
+                class="brand-icon"
+                src="assets/icon.png"
+                alt=""
+                width="34"
+                height="34"
+              />
+              <span class="brand-name">待办助手</span>
+            </a>
+            <p>一个轻量、专注、把数据留在本地的浏览器待办扩展。</p>
+          </div>
+
+          <nav class="footer-links" aria-label="页脚导航">
+            <a href="#features">功能</a>
+            <a href="#preview">界面</a>
+            <a href="#install">安装</a>
+            <a
+              href="https://github.com/ktmitax/BrowserTodoHelper"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </nav>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> ktmitax · 待办助手</span>
+          <span class="footer-meta">
+            支持 Chrome 114+ / Edge 114+
+            <span class="footer-dot" aria-hidden="true"></span>
+            v1.0.0
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
